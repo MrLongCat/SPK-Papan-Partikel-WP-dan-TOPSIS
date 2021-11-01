@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background"
+    tools:context=".SavedRecommendation">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:text="REKOMENDASI TERSIMPAN"
+        android:textColor="#2D7DD2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="#ffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#812D7DD2"
+        android:layout_below="@+id/header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/instruksi"
+        android:layout_marginBottom="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_below="@+id/header"
+        android:layout_height="60dp"
+        android:id="@+id/progress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="250dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memuat..."
+        android:layout_below="@+id/progress"
+        android:gravity="center_horizontal"
+        android:id="@+id/memuat"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/instruksi"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#DCDCDC"
+        android:id="@+id/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/instruksi"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Klik untuk melihat dan mengedit data"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Tahan klik untuk menghapus data"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

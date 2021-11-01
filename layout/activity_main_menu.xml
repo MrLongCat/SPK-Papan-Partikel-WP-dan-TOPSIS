@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".MainMenu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="305dp"
+        android:background="@drawable/another_cool_bg_ver_two"
+        android:id="@+id/header">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="PAPAN PARTIKEL TERBAIK"
+            android:textColor="#ffff"
+            android:maxLines="2"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="40sp"
+            android:autoSizeMaxTextSize="50sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp">
+
+            //REKOMENDASI
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:id="@+id/add">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rekomendasi_vektor3"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="REKOMENDASI"
+                        android:textColor="#e0eefc"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:maxLines="1"
+                        android:text="PAPAN PARTIKEL"
+                        android:textColor="#e0eefc"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|top"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //REKOMENDASI TERSIMPAN
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal"
+                android:layout_marginTop="15sp"
+                android:gravity="center_vertical"
+                android:id="@+id/savedRec">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rekomendasi_tersimpan_vektor2"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="REKOMENDASI"
+                        android:textColor="#e0eefc"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="TERSIMPAN"
+                        android:textColor="#e0eefc"
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|top"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //BANTUAN
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal"
+                android:layout_marginTop="15sp"
+                android:gravity="center_vertical"
+                android:id="@+id/help">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/help2"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="BANTUAN"
+                        android:textColor="#e0eefc"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //TENTANG
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal"
+                android:layout_marginTop="15sp"
+                android:gravity="center_vertical"
+                android:id="@+id/about">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/stack2"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="TENTANG"
+                        android:textColor="#e0eefc"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="25sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="APLIKASI"
+                        android:textColor="#e0eefc"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="25sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal|top"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_below="@+id/header">-->
+<!--        -->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#2D7DD2"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:id="@+id/add">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="REKOMENDASI"-->
+<!--                    android:textColor="#ffff"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#2D7DD2"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:id="@+id/savedRec">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="REKOMENDASI TERSIMPAN"-->
+<!--                    android:textColor="#ffff"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#2D7DD2"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:id="@+id/help">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="HELP (COMING SOON)"-->
+<!--                    android:textColor="#ffff"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="#2D7DD2"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginLeft="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="ABOUT (COMING SOON)"-->
+<!--                    android:textColor="#ffff"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

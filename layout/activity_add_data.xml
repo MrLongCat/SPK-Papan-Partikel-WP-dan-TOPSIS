@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".addData">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/header_data">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:id="@+id/form">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Harap Lengkapi Data Papan Partikel Berikut"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#1566E0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                //--------------------NAMA PAPAN---------------------//
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Nama Papan    :"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <EditText
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:id="@+id/namaPapan"
+                        android:hint="ex: Papan Partikel Batang Sawit"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:maxLines="1"
+                        android:background="@drawable/form" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:text="SIFAT FISIS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="-25dp"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/sub_title"/>
+
+                //-----------------Kerapatan----------------------//
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Kerapatan :"
+                        android:textColor="@android:color/secondary_text_light" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/kerapatan"
+                            android:hint="ex: 0.5"
+                            android:textSize="16sp"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/satuan"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //--------------------Kadar Air--------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Kadar Air :"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/kadarAir"
+                            android:hint="ex: 10"
+                            android:textSize="16sp"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="%"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //----------------------Pengembangan Tebal-------------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Pengembangan Tebal :"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/pengembanganTebal"
+                            android:hint="ex: 12.6"
+                            android:textSize="16sp"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="%"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //----------------------Daya Serap Air-------------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Daya Serap Air :"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/serap"
+                            android:hint="ex: 8"
+                            android:textSize="16sp"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="%"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:text="SIFAT MEKANIS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="-25dp"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="15dp"
+                    android:background="@drawable/sub_title"/>
+
+                //-----------------Mod Elastisitas----------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Mod. Elastisitas :"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/elastis"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:maxLines="1"
+                            android:hint="ex: 20400"
+                            android:textSize="16sp"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <Spinner
+                            android:id="@+id/satuanElastis"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //-----------------Mod Patah----------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Mod. Patah          :"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/patah"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:hint="ex: 90"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <Spinner
+                            android:id="@+id/satuanPatah"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //-----------------Kuat Pegang Sekrup----------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Kuat Pegang Sekrup    :"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/sekrup"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:maxLines="1"
+                            android:hint="ex: 40"
+                            android:textSize="16sp"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <Spinner
+                            android:id="@+id/satuanSekrup"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //-----------------Rekat Internal----------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Kuat Rekat Internal   :"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/rekat"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:hint="ex: 10.8"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <Spinner
+                            android:id="@+id/satuanRekat"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:text="MUTU PENAMPILAN"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="-25dp"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/sub_title"/>
+
+                //--------------------Partikel Kasar Permukaan--------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Partikel Kasar Permukaan:"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/kasar"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:hint="ex: 2"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="Jumlah"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //--------------------Diameter Noda Serbuk--------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Diameter Noda Serbuk :"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/noda"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:hint="ex: 0.5"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="cm"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //--------------------Noda Minyak--------------------//
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Noda Minyak:"
+                        android:textColor="@android:color/secondary_text_light"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="50dp">
+
+                        <EditText
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:id="@+id/minyak"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:hint="ex: 1.2"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/form" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="cm"
+                            android:textColor="@android:color/secondary_text_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:text="SELANJUTNYA"
+                    android:textColor="#ffffff"
+                    android:background="#2D7DD2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

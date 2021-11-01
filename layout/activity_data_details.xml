@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="#1"
+            android:id="@+id/peringkat"
+            android:textColor="#ffff"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            android:background="@drawable/blue_color"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.7"
+            android:background="#2176CF">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="SUPER LONGCAT "
+                android:maxLines="2"
+                android:id="@+id/nama_rec"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="2sp"
+                android:gravity="center_horizontal|bottom"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#ffff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/garis"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="PAPAN PARTIKEL KAYU EUCALYPTUS"
+                android:id="@+id/nama_pp"
+                android:textColor="#ffff"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeMaxTextSize="50sp"
+                android:autoSizeStepGranularity="2sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|top"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#992D7DD2"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:text="Sifat Fisis"
+                    android:textStyle="bold"
+                    android:textColor="#2D7DD2"
+                    android:textSize="19sp"
+                    android:paddingRight="50dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.3"
+                    android:text="Nilai"
+                    android:textColor="#2D7DD2"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2D7DD2"/>
+
+            //-------------------KERAPATAN----------------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="@string/kerapatan"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nKerapatan"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≥0,5"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //-------------------KADAR AIR---------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Kadar Air (%)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nKadarAir"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≤13"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //----------------PENGEMBANGAN TEBAL---------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Pengembangan Tebal (%)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nTebal"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≤12"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //---------------DAYA SERAP AIR------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Daya Serap Air (%)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nSerap"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="-"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2D7DD2"/>
+
+            //-----------------SIFAT MEKANIS---------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:text="Sifat Mekanis"
+                    android:textColor="#2D7DD2"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:paddingRight="50dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.3"
+                    android:text="Nilai"
+                    android:textColor="#2D7DD2"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2D7DD2"/>
+
+            //-------------------MODULUS ELASTISITAS----------------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="@string/elastis"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nElastis"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≥20400"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //-------------------MODULUS PATAH---------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="@string/patah"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nPatah"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≥80"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //----------------KUAT PEGANG SEKRUP---------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Kuat Pegang Sekrup (kgf)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nSekrup"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≥30"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //---------------KUAT REKAT INTERNAL------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="@string/rekat"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nRekat"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text=">1,5"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2D7DD2"/>
+
+            //--------------MUTU PENAMPILAN-------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:text="Mutu Penampilan"
+                    android:textColor="#2D7DD2"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:paddingRight="50dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.3"
+                    android:text="Nilai"
+                    android:textColor="#2D7DD2"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2D7DD2"/>
+
+            //-------------------PARTIKEL KASAR PERMUKAAN----------------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Jumlah Partikel Kasar Permukaan"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nKasar"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≤10"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //-------------------DIAMETER NODA SERBUK---------------------//
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Diameter Noda Serbuk (cm)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nSerbuk"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≤1"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+            //----------------DIAMETER NODA MINYAK---------------//
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#ffff">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Diameter Noda Minyak (cm)"
+                        android:gravity="center_vertical|bottom"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="SNI"
+                        android:gravity="center_vertical|top"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="14"
+                        android:id="@+id/nMinyak"
+                        android:gravity="center_horizontal|bottom"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="≤1"
+                        android:gravity="center_horizontal|top"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#4D000000"/>
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

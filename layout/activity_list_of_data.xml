@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListOfData"
+    android:id="@+id/bg">
+<!--    android:background="@drawable/data_kosong"-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:text="DAFTAR PAPAN PARTIKEL"
+        android:textColor="#2D7DD2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="#ffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#812D7DD2"
+        android:layout_below="@+id/header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listData"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E4E4E4"
+        android:id="@+id/view"
+        android:layout_above="@id/instruksi"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_btn"
+        android:id="@+id/instruksi"
+        android:orientation="vertical"
+        android:layout_marginBottom="-10dp"
+        android:layout_marginLeft="25dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Klik untuk melihat dan mengedit data"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Klik simbol (X) untuk menghapus data"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center|end"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/add_btn"
+        android:layout_marginRight="-20dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/hitung"
+            style="?borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_background_unactive"
+            android:enabled="false"
+            android:text="H I T U N G"
+            android:textColor="#ffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:src="@drawable/ic_round_add_circle_white"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/add_btn"
+        android:src="@drawable/ic_round_add_circle_24"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
